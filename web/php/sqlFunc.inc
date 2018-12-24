@@ -2,7 +2,7 @@
 
 function dbConnect(){
 
-  $con = mysqli_connect('YOURSEVER', 'YOURID', 'YOURPASSWORD', 'YOURDB');
+  $con = mysqli_connect('YOURSERVER', 'YOURID', 'YOURPASSWORD', 'YOURDB');
 
   if(mysqli_connect_errno()){
     ?><script>alert("Failed to connect to MySQL")</script>
