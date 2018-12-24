@@ -204,7 +204,7 @@ function deleteQuerym1($_table, $_fieldname, $_value){
 
     $query = "DELETE FROM $_table WHERE $_fieldname = '$_value'";
 
-    $db = db_connect();
+    $db = dbConnect();
     $result=mysqli_query($db, $query);
     mysqli_close($db);
 }
@@ -216,7 +216,7 @@ function isNull($value){
 }
 
 function sendQuery($query){
-  $db = db_connect();
+  $db = dbConnect();
   $result = mysqli_query($db, $query);
   mysqli_close($db);
 
