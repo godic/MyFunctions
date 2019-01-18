@@ -1,5 +1,5 @@
 <?php
-include_once "config.inc";
+include_once "config.php";
 
 function db_connect(){
 
@@ -116,7 +116,6 @@ function select_query_m2($_table, $_attribute, $_fieldname1, $_value1, $_fieldna
 
 function select_query_mm($_table, $_attribute, $_fieldname, $_value){
 
-    $last;
     // Attributes
     $query = "SELECT ";
     for($i=0; $i < count($_attribute)-1;$i++){
@@ -160,7 +159,7 @@ function insert_query($_table, $_attribute){
     $db = db_connect();
     $result=mysqli_query($db, $query);
     mysqli_close($db);
-    
+
     return $result;
 }
 
@@ -218,12 +217,6 @@ function delete_query_m1($_table, $_fieldname, $_value){
     $result=mysqli_query($db, $query);
     mysqli_close($db);
     return $result;
-}
-
-function is_null($value){
-    if($value === NULL)
-        return true;
-    return false;
 }
 
 function send_query($query){
