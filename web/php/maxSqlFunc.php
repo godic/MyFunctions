@@ -187,7 +187,7 @@ function update_query_v2_m1($_table, $attribute1, $value1, $attribute2, $value2,
 
 function update_query_vm_mm($_table, $_attribute, $value, $_field, $_value){
 // Attributes
-    $last = count($attribute) - 1;
+    $last = count($_attribute) - 1;
     $query = "UPDATE $_table SET ";
     for($i = 0; $i < $last; $i++){
         $query .= $_attribute[$i] . " = '" . $_value[$i] . "', ";
